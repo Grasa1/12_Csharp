@@ -46,16 +46,55 @@ namespace Ismetles2
             }
             return null;
         }
-        public Books Findbylittle(string author)
+
+
+        public Books Findbyauthor(string author)
+
         {
+            List<Books> booksByAuthor = new List<Books>();
+            
             foreach (var book in _books)
             {
                 if (book.AuthorProprty == author)
                 {
-                    return book.Title  ;
+                   booksByAuthor.Add(book)  ;
+                     
+                    
+                }
+
+            }
+            return booksByAuthor.FirstOrDefault()
+
+            ;
+        }
+        public int TotalPages()
+        {
+            int total = 0;
+            foreach (var book in _books)
+            {
+                total += book.Pagecount;
+            }
+            return total;
+        }
+        public double Averagepages()
+        {
+            if (_books.Count == 0)
+            {
+                return 0;
+            }
+            return (double)TotalPages() / _books.Count;
+        }
+
+        public Books Availablebooks()
+        {
+            List<Books> availableBooks = new List<Books>();
+            foreach (var book in _books)
+            {
+                if (book.Isavailable)
+                {
+                    availableBooks.Add(book);
                 }
             }
-            return null;
         }
     }
 }

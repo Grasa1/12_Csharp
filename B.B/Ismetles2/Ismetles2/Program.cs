@@ -27,6 +27,9 @@
             L.Addbook(d);
             L.Addbook(e);
             L.Printall();
+            L.Findbylittle("The Great Gatsby");
+            L.Findbyauthor("Harper Lee");
+            L
 
 
 
