@@ -27,6 +27,7 @@ namespace Ismetles2
                     
             }
         }
+        public bool Isavailable = true;
 
         private int pagecount = 0;
 
@@ -48,17 +49,32 @@ namespace Ismetles2
             return Pagecount > 300;
         }
 
-        public Books(string title, string auhor):this(title, auhor, 0)
+        public Books(string title, string author)
         {
             Title = title;
-            AuthorProprty = auhor;
+            AuthorProprty = author;
             Count++;
 
         }
 
         public static int Count = 0;
         
-
+        public bool Borrow()
+        {
+            if (Isavailable)
+            {
+                Isavailable = true;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void Return()
+        {
+               Isavailable = true;
+        }
 
     }
 }

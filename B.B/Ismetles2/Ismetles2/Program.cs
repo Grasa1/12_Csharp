@@ -7,6 +7,7 @@
            
             Books a = new Books("The Great Gatsby", "F. Scott Fitzgerald", 180);
             Books b = new Books("To Kill a Mockingbird", "Harper Lee", -281);
+            Books e = new Books("The Catcher in the Rye", "J.D. Salinger", 277);
             Console.WriteLine(Books.Count);
             Books c = new Books("1984", "George Orwell", 328);
             Books d = new Books("Pride and Prejudice", "Jane Austen");
@@ -15,6 +16,18 @@
             Console.WriteLine(b.Pagecount);
             Console.WriteLine(a.Title);
             Console.WriteLine(c.IsLongBook());
+            Console.WriteLine(a.Isavailable);
+            Console.WriteLine(b.Borrow());
+            
+
+            Library L = new Library("My Library");
+            L.Addbook(a);
+            L.Addbook(b);
+            L.Addbook(c);
+            L.Addbook(d);
+            L.Addbook(e);
+            L.Printall();
+
 
 
         }
