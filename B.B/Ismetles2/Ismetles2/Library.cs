@@ -35,19 +35,16 @@ namespace Ismetles2
                 Console.WriteLine(book.Describe());
             }
         }   
-        public void Findbylittle(string title)
+        public Books Findbylittle(string title)
         {
             foreach (var book in _books)
             {
                 if (book.Title == title)
                 {
-                    Console.WriteLine(book.Describe);  
-                }
-                else
-                {
-
+                    return book;
                 }
             }
+            return null;
         }
     }
 }
