@@ -46,5 +46,16 @@ namespace Ismetles2
             }
             return null;
         }
+        public Books Findbylittle(string author)
+        {
+            foreach (var book in _books)
+            {
+                if (book.AuthorProprty == author)
+                {
+                    return book.Title  ;
+                }
+            }
+            return null;
+        }
     }
 }
