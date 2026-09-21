@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace vending
 {
-    internal class ProductCategory
+   
+    public enum ProductCategory
     {
-        public enum ProductCAtegory
-        {
-            Drink, Snack, Food
-        }
-
+        Drink, Snack, Food
     }
 }

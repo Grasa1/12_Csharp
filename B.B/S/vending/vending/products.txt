@@ -1,0 +1,8 @@
+A1;Viz;350;8;Drink
+A2;Kola;450;5;Drink
+A3;Ice Tea;480;0;Drink
+B1;Chips;690;3;Snack
+B2;Csoki;520;6;Snack
+B3;Popcorn;420;4;Snack
+C1;Szendvics;890;2;Food
+C2;Hot Dog;750;0;Food
