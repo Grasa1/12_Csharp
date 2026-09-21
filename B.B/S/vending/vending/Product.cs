@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace vending
 {
-    internal class Product
+    public class Product
     {
         private string code;
         private string name;
