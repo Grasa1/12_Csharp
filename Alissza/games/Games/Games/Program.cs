@@ -38,9 +38,20 @@ foreach (KeyValuePair<string, double> item in model.MaxRating())
     Console.WriteLine($"{item.Key} : {item.Value}");
 }
 
+Console.WriteLine("----------------------------------------------------");
+
 foreach (KeyValuePair<string, string> item in model.MostExpensiveGame())
 {
     Console.WriteLine($"{item.Key} : {item.Value}");
 }
 
+Console.WriteLine("----------------------------------------------------");
+
 model.PublisherMin4().ForEach( x => Console.WriteLine(x));
+
+Console.WriteLine("----------------------------------------------------");
+
+foreach (KeyValuePair<string, double> item in model.PublisherAvOrder())
+{
+    Console.WriteLine($"{item.Key} : {item.Value}");
+}

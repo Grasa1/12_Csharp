@@ -56,6 +56,21 @@ namespace Games
             return games.GroupBy(x => x.Publisher).Where(x=>x.Count() >= 4).Select(x=>x.Key).ToList();
         }
 
+        public Dictionary <string, double> PublisherAvOrder()
+        {
+            return games.GroupBy(x=>x.Publisher).OrderByDescending(x=>x.Average(y=>y.Rating)).ToDictionary(x=>x.Key, x=>x.Average(y=>y.Rating));
+        }
+
+        public Dictionary<string, int> After2020Publisher()
+        {
+            return games.Where(x => x.Year >= 2020).GroupBy(x => x.Publisher).ToDictionary(x => x.Key, x => x.Count());
+        }
+
+        public Dictionary<string, string> BestRatingGenre()
+        {
+            return games.GroupBy(x => x.Genre).Select(x => x.OrderByDescending(y => y.Rating).First()).ToDictionary(x => x.Genre, x => x.Name);
+        } 
+
 
 
 
